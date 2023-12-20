@@ -8,10 +8,10 @@ namespace FormKontrollSystem
 {
     internal class Rectangle : Shape
     {
-        double Length {  get; set; }
-        double Width {  get; set; }
+        decimal Length {  get; set; }
+        decimal Width {  get; set; }
 
-        public Rectangle(string color, double length, double width)
+        public Rectangle(string color, decimal length, decimal width)
         {
             this.Name = "Rectangle";
             this.Color = color;
@@ -19,7 +19,7 @@ namespace FormKontrollSystem
             Width = width;  
         }
 
-        public override double CalculateArea()
+        public override decimal CalculateArea()
         {
             return Length * Width;
         }

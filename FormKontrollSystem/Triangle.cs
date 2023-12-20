@@ -8,10 +8,10 @@ namespace FormKontrollSystem
 {
     internal class Triangle : Shape
     {
-        double BaseLength {  get; set; }
-        double Height {  get; set; }
+        decimal BaseLength {  get; set; }
+        decimal Height {  get; set; }
 
-        public Triangle(string color, double baseLength, double height)
+        public Triangle(string color, decimal baseLength, decimal height)
         {
             this.Name = "Triangle";
             this.Color = color;
@@ -19,9 +19,9 @@ namespace FormKontrollSystem
             Height = height;
         }
 
-        public override double CalculateArea()
+        public override decimal CalculateArea()
         {
-            return 0.5 * BaseLength * Height;
+            return (decimal)0.5 * BaseLength * Height;
         }
     }
 }

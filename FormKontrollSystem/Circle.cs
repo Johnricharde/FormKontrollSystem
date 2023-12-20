@@ -8,18 +8,19 @@ namespace FormKontrollSystem
 {
     internal class Circle : Shape
     {
-        double Radius { get; set; }
+        public decimal Radius { get; set; }
 
-        public Circle(string color, double radius)
+        public Circle(string color, decimal radius)
         {
             this.Name = "Circle";
             this.Color = color;
             Radius = radius;
         }
 
-        public override double CalculateArea()
+        public override decimal CalculateArea()
         {
-            return Math.PI * Math.Pow(Radius, 2);
+            decimal _area = (decimal)(Math.PI * Math.Pow((double)Radius, 2));
+            return decimal.Round((decimal)_area, 2);
         }
     }
 }
